@@ -65,28 +65,44 @@ gravity**.
 
 They are the most browsable part of the thesis — each is readable on its own.
 
-## A note on `main.tex`
+## The source
 
-**The LaTeX source in this repository is not the source of the finished thesis.**
-`main.tex` is an early draft: it still carries the working title *"Non-invertible
-symmetries to study 3d complex scalar boson"*, an abstract reading *"To be
-written"*, and a section explicitly marked *Sparse Notes*. The submitted document
-is the PDF.
+`main.tex` is the LaTeX source of the submitted thesis — a single `revtex4`
+document of about 2,200 lines, imported from the Overleaf project it was written
+in. It has been checked against the committed PDF: every section heading and a
+sample of prose passages match, so the source in this repository is the one that
+produced `continuous_non_inv_sym_in_3d_OFFICIAL.pdf`, not a later revision.
 
-The draft is kept because it records the early stage of the work, and because
-the CI below still builds it. Read the PDF for the thesis; read `main.tex` only
-if you want the scaffolding it grew out of.
-
-Building the draft is the standard `revtex4` cycle:
-
-```bash
-pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+```
+main.tex        The thesis
+main.bib        40 references
+utphys.bst      Bibliography style (utphys, the standard hep-th style)
+images/         15 figures used by the text — TikZ diagrams exported to PDF,
+                plus three raster images
 ```
 
-`.github/workflows/` compiles it on every push with `xu-cheng/latex-action` and
-publishes the PDF as a **draft GitHub Release** named `Draft <timestamp>`, so a
-current build is always available from the Releases page without a local TeX
-installation.
+### Building
+
+Standard `revtex4` cycle — pdfLaTeX and BibTeX, no special engine required:
+
+```bash
+pdflatex main.tex
+bibtex main
+pdflatex main.tex
+pdflatex main.tex
+```
+
+The document draws diagrams with TikZ and `xy`, so a reasonably complete TeX
+distribution (TeX Live full, MacTeX) is expected.
+
+`.github/workflows/build.yaml` runs the same build on **every push** with
+`xu-cheng/latex-action`, publishing `main.pdf` and `main.bbl` as a **draft
+GitHub Release** named `Draft <timestamp>`. A current build is therefore always
+available from the Releases page without a local TeX installation.
+
+Build artefacts (`.aux`, `.bbl`, `.log`, `.synctex.gz`, and the CI's
+`main.pdf`) are gitignored; the submitted PDF is committed under its own name so
+it is never overwritten by a local build.
 
 ## AI declaration
 

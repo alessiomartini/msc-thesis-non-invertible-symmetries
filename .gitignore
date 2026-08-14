@@ -1,0 +1,25 @@
+# LaTeX build artefacts. The compiled thesis is committed deliberately as
+# continuous_non_inv_sym_in_3d_OFFICIAL.pdf; everything below is regenerated
+# on every build and should not be tracked.
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+
+# main.pdf is the CI build output of main.tex; the submitted version is
+# committed under its own name instead.
+main.pdf
