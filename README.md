@@ -30,7 +30,7 @@ arbitrary $p$-form degrees**, within mixed 't Hooft anomalies. Using the
 | --- | --- | --- |
 | 1 | Cubic, $F_A \wedge F_B \wedge F_B$ | **Works** — generates a continuous non-invertible symmetry on the boundary |
 | 2 | Linear mixed, $F_A \wedge F_B \wedge F_C$ | **Works** |
-| 3 | Quartic, $F_A \wedge F_B \wedge F_C \wedge F_D$ | **Fails** |
+| 3 | Quartic, $F_A \wedge F_B \wedge F_C \wedge F_D$ | **Fails** - using our method |
 | 4 | Quadratic, $F_A \wedge F_B$ | **Fails** |
 
 Scenarios 3 and 4 are included deliberately. A method that succeeds everywhere
