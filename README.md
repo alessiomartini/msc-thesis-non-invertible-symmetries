@@ -98,7 +98,7 @@ author's own.
 
 ## Related repository
 
-- [`anomalies_qm_bsc_thesis`](https://github.com/alessiomartini/anomalies_qm_bsc_thesis)
+- [`bsc-thesis-scale-anomaly-in-qm`](https://github.com/alessiomartini/bsc-thesis-scale-anomaly-in-qm)
   — the Bachelor's thesis, on the scale anomaly of the $1/x^2$ potential: the
   same theme, a classical symmetry broken by quantization, in the simplest
   setting quantum mechanics allows.
